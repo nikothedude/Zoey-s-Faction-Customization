@@ -1,0 +1,24 @@
+id,category,pluginPath
+# commodity id,,
+drugs,TABOO,zoey_fc.illegals.plugins.DrugPlugin
+hand_weapons,TABOO,zoey_fc.illegals.plugins.ArmamentPlugin
+organs,TABOO,zoey_fc.illegals.plugins.OrganPlugin
+,,
+luxury_goods,STANDARD,zoey_fc.illegals.plugins.LuxuryPlugin
+domestic_goods,STANDARD,zoey_fc.illegals.plugins.DomesticPlugin
+volatiles,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+ships,STANDARD,zoey_fc.illegals.plugins.ShipPlugin
+food,STANDARD,zoey_fc.illegals.plugins.FoodPlugin
+organics,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+supplies,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+fuel,STANDARD,zoey_fc.illegals.plugins.FuelPlugin
+heavy_machinery,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+metals,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+rare_metals,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+ore,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+rare_ore,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
+,,
+crew,MISC,zoey_fc.illegals.plugins.CrewPlugin
+marines,MISC,zoey_fc.illegals.plugins.MarinePlugin
+,,
+ai_cores,AI,zoey_fc.illegals.plugins.AIPlugin
