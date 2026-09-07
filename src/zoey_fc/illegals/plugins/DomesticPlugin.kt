@@ -21,7 +21,7 @@ class DomesticPlugin: IllegalCommodityPlugin() {
     }
 
     override fun apply() {
-        getPlayerFac().getFactionMarkets().filter { !it.isFreePort }.forEach { it.stability.modifyFlat("ZHCDomesticPlugin", STAB_MALUS, "Illegal Luxuries") }
+        getPlayerFac().getFactionMarkets().filter { !it.isFreePort }.forEach { it.stability.modifyFlat("ZHCDomesticPlugin", STAB_MALUS, "Illegal Goods") }
         Global.getSector().listenerManager.addListener(this)
     }
 

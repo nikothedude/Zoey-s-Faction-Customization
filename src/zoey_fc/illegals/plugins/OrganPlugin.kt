@@ -13,17 +13,15 @@ import org.magiclib.kotlin.getFactionMarkets
 class OrganPlugin: IllegalCommodityPlugin(), MarketImmigrationModifier {
     companion object {
         const val STAB_MALUS = -1f
-        const val POP_GROWTH_MALUS = -10f
+        const val POP_GROWTH_MALUS = -4f
     }
 
     override fun apply() {
-        getPlayerFac().getFactionMarkets().filter { !it.isFreePort }.forEach { it.stability.modifyFlat("ZHCOrganPlugin", STAB_MALUS, "Legal Organs") }
-        Global.getSector().listenerManager.addListener(this)
+        getPlayerFac().getFactionMarkets().filter { !it.isFreePort }.forEach { it.addImmigrationModifier(this); it.stability.modifyFlat("ZHCOrganPlugin", STAB_MALUS, "Legal Organs") }
     }
 
     override fun unapply() {
-        Global.getSector().economy.marketsCopy.forEach { it.stability.unmodify("ZHCOrganPlugin") }
-        Global.getSector().listenerManager.removeListener(this)
+        Global.getSector().economy.marketsCopy.forEach { it.removeImmigrationModifier(this); it.stability.unmodify("ZHCOrganPlugin") }
     }
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
@@ -44,7 +42,7 @@ class OrganPlugin: IllegalCommodityPlugin(), MarketImmigrationModifier {
         if (incoming == null) return
 
         if (market.faction.isPlayerFaction) {
-            incoming.weight.modifyFlat("ZHCAIPlugin", POP_GROWTH_MALUS, "Legal Organs")
+            incoming.weight.modifyFlat("ZHCAIPlugin", POP_GROWTH_MALUS, "Fears of organ harvesting")
         }
     }
 

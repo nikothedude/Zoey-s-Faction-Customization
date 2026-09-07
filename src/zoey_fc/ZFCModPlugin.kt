@@ -35,6 +35,12 @@ class ZFCModPlugin : BaseModPlugin() {
         Global.getSector().playerFaction.isShowInIntelTab = true
         Global.getSector().addTransientListener(ZFCCampaignListener())
         IllegalCommodityScript().start()
+
+        RankAndPostIntelPlugin.get()
+        FleetNameIntelPlugin.get()
+        IllegalIntelPlugin.get()
+        ColorIntelPlugin.get()
+        ColorIntelPlugin.syncFacColor(Global.getSector().playerFaction)
     }
 
     /*Runs when a save is created.

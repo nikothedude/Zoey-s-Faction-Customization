@@ -16,7 +16,9 @@ import patchlib.api.match.FieldMatch
 import patchlib.api.match.MethodMatch
 import patchlib.api.patch.After
 import patchlib.api.patch.Patch
+import zoey_fc.ColorIntelPlugin
 import zoey_fc.FleetNameIntelPlugin
+import zoey_fc.RankAndPostIntelPlugin
 import zoey_fc.ReflectionUtils
 import zoey_fc.illegals.IllegalIntelPlugin
 import java.awt.Color
@@ -45,6 +47,8 @@ object FactionPanelPatch {
         val tooltip = newPanel.createUIElement(width, height, false)
 
         tooltip.addButton("Change Fleet Names", "ZFCChangeFleetNamesButton", 150f, 20f, 0f).position.inTR(40f, 0f)
+        tooltip.addButton("Change Ranks/Posts", "ZFCChangePostNamesButton", 150f, 20f, 0f).position.inTR(40f, 30f)
+        tooltip.addButton("Change Color", "ZFCChangeColorButton", 150f, 20f, 0f).position.inTR(40f, 60f)
 
         newPanel.addUIElement(tooltip).inBR(0f, 0f)
         panel.addComponent(newPanel).inBR(0f, 0f)
@@ -57,7 +61,10 @@ object FactionPanelPatch {
                     Global.getSector().campaignUI.showCoreUITab(CoreUITabId.INTEL, FleetNameIntelPlugin.get())
                 }
                 "ZFCChangePostNamesButton" -> {
-                    Global.getSector().campaignUI.showCoreUITab(CoreUITabId.INTEL, FleetNameIntelPlugin.get())
+                    Global.getSector().campaignUI.showCoreUITab(CoreUITabId.INTEL, RankAndPostIntelPlugin.get())
+                }
+                "ZFCChangeColorButton" -> {
+                    Global.getSector().campaignUI.showCoreUITab(CoreUITabId.INTEL, ColorIntelPlugin.get())
                 }
             }
         }
