@@ -87,7 +87,7 @@ class AIPlugin: IllegalCommodityPlugin() {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "Legalizing AI use is a intensely suspicious act, though only a few parties - the %s and %s most notably - will take it as a declaration of %s.",
+            "Legalizing AI use is a intensely suspicious act, though only a few parties - the %s and %s most notably - will take it as a declaration of %s",
             10f,
             Misc.getNegativeHighlightColor(),
             "Luddic Church", "Luddic Path", "war"
@@ -98,14 +98,14 @@ class AIPlugin: IllegalCommodityPlugin() {
         )
 
         tooltip.addPara(
-            "%s of all factions without legalized AI every month.",
+            "%s of all factions without legalized AI every month",
             10f,
             Misc.getNegativeHighlightColor(),
             "Decreases reputation"
         )
 
         tooltip.addPara(
-            "%s feel more comfortable trading %s with %s, resulting in colonies %s and %s AI cores at a rate proportional to %s.",
+            "%s feel more comfortable trading %s with %s, resulting in colonies %s and %s AI cores at a rate proportional to %s",
             10f,
             Misc.getNegativeHighlightColor(),
             "Independent parties", "AI cores", "${getPlayerFac().displayNameWithArticle}", "purchasing", "stockpiling", "accessibility"

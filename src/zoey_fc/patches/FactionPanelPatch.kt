@@ -6,7 +6,9 @@ import com.fs.starfarer.api.campaign.CoreUITabId
 import com.fs.starfarer.api.campaign.econ.MarketAPI
 import com.fs.starfarer.api.ui.Alignment
 import com.fs.starfarer.api.ui.Fonts
+import com.fs.starfarer.api.ui.LabelAPI
 import com.fs.starfarer.api.ui.PositionAPI
+import com.fs.starfarer.api.ui.TextFieldAPI
 import com.fs.starfarer.api.ui.UIComponentAPI
 import com.fs.starfarer.api.ui.UIPanelAPI
 import com.fs.starfarer.campaign.Faction
@@ -30,7 +32,10 @@ import java.lang.reflect.Method
     FieldMatch(type = Color::class),
     FieldMatch(type = Color::class),
     FieldMatch(type = Color::class),
-    FieldMatch(type = MarketAPI::class)
+    FieldMatch(type = MarketAPI::class),
+    FieldMatch(subtype = TextFieldAPI::class),
+    FieldMatch(subtype = TextFieldAPI::class),
+    FieldMatch(subtype = LabelAPI::class),
 )))
 object FactionPanelPatch {
 

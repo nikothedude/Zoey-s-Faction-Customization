@@ -30,15 +30,6 @@ enum class Post {
             return "Officer"
         }
     },
-    OFFICER_FOR_HIRE {
-        override fun getTypeString(): String {
-            return Ranks.POST_OFFICER_FOR_HIRE
-        }
-
-        override fun getUIName(): String {
-            return "Officer (For hire)"
-        }
-    },
     MERCENARY {
         override fun getTypeString(): String {
             return Ranks.POST_MERCENARY

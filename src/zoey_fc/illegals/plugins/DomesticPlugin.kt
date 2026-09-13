@@ -48,7 +48,7 @@ class DomesticPlugin: IllegalCommodityPlugin() {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "%s with factions that have Luxury Goods banned every month.",
+            "%s with factions that have Luxury Goods banned every month",
             10f,
             Misc.getHighlightColor(),
             "Improves relations"

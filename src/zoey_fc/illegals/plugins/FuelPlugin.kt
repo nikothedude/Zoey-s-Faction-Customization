@@ -17,7 +17,7 @@ import org.magiclib.kotlin.getFactionMarkets
 // reduces stability. why would you do this. i guess the church likes it
 class FuelPlugin: IllegalCommodityPlugin() {
     companion object {
-        const val STAB_BONUS = 1f
+        const val STAB_BONUS = -1f
     }
 
     override fun apply() {
@@ -32,8 +32,8 @@ class FuelPlugin: IllegalCommodityPlugin() {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "Increases faction-wide stability by ${STAB_BONUS.toInt()}",
+            "Reduces faction-wide stability by ${-STAB_BONUS.toInt()}",
             10f
-        ).color = Misc.getPositiveHighlightColor()
+        ).color = Misc.getNegativeHighlightColor()
     }
 }

@@ -46,7 +46,7 @@ class LuxuryPlugin: IllegalCommodityPlugin(), MarketImmigrationModifier {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "Increases %s, as well as %s with factions that have Luxury Goods banned every month.",
+            "Increases %s, as well as %s with factions that have Luxury Goods banned every month",
             10f,
             Misc.getHighlightColor(),
             "luddic immigration", "slowly improving relations"

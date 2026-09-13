@@ -22,7 +22,7 @@ class MarinePlugin: IllegalCommodityPlugin() {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "Banning marines has no effect other than making military logistics even harder.",
+            "Banning marines has no effect other than making military logistics even harder",
             10f
         )
     }

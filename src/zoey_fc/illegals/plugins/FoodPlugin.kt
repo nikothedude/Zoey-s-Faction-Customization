@@ -14,7 +14,7 @@ import com.fs.starfarer.api.util.Misc
 import nikoblackhearted.illegals.IllegalCommodityPlugin
 import org.magiclib.kotlin.getFactionMarkets
 
-// reduces stability. why would you do this. i guess the church likes it
+// reduces stability. why would you do this.
 class FoodPlugin: IllegalCommodityPlugin() {
     companion object {
         const val STAB_MALUS = -3f

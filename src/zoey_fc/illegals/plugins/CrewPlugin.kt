@@ -26,7 +26,7 @@ class CrewPlugin: IllegalCommodityPlugin(), MarketImmigrationModifier {
 
     override fun createDesc(tooltip: TooltipMakerAPI) {
         tooltip.addPara(
-            "Banning humans, predictably, has disastrous effects.",
+            "Banning humans, predictably, has disastrous effects",
             10f
         )
         tooltip.addPara(

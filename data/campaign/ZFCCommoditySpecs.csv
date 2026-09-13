@@ -8,7 +8,6 @@ luxury_goods,STANDARD,zoey_fc.illegals.plugins.LuxuryPlugin
 domestic_goods,STANDARD,zoey_fc.illegals.plugins.DomesticPlugin
 volatiles,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
 ships,STANDARD,zoey_fc.illegals.plugins.ShipPlugin
-food,STANDARD,zoey_fc.illegals.plugins.FoodPlugin
 organics,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
 supplies,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
 fuel,STANDARD,zoey_fc.illegals.plugins.FuelPlugin
@@ -20,5 +19,6 @@ rare_ore,STANDARD,zoey_fc.illegals.plugins.NoEffectPlugin
 ,,
 crew,MISC,zoey_fc.illegals.plugins.CrewPlugin
 marines,MISC,zoey_fc.illegals.plugins.MarinePlugin
+food,MISC,zoey_fc.illegals.plugins.FoodPlugin
 ,,
 ai_cores,AI,zoey_fc.illegals.plugins.AIPlugin
