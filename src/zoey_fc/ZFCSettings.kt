@@ -1,6 +1,7 @@
 package zoey_fc
 
 import com.fs.starfarer.api.Global
+import lunalib.lunaSettings.LunaSettings
 import nikoblackhearted.illegals.CommCategory
 import nikoblackhearted.illegals.IllegalCommodityPlugin
 
@@ -10,8 +11,10 @@ object ZFCSettings {
 
     val specs = HashMap<String, IllegalCommodityPlugin>()
 
-    fun loadSettings() {
+    var ILLEGAL_EFFECT_ENABLED = true
 
+    fun loadSettings() {
+        ILLEGAL_EFFECT_ENABLED = LunaSettings.getBoolean(MOD_ID, "ZFC_illegalEffectEnabled")!!
     }
 
     fun generateCommoditySpecs() {

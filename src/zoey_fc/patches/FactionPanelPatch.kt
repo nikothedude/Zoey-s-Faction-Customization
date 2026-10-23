@@ -26,7 +26,7 @@ import zoey_fc.illegals.IllegalIntelPlugin
 import java.awt.Color
 import java.lang.reflect.Method
 
-@Patch(target = ClassMatch(targetPackage = "com.fs.starfarer.campaign.ui.marketinfo", fieldMatches = arrayOf(
+@Patch(target = ClassMatch(packageName = "com.fs.starfarer.campaign.ui.marketinfo", fieldMatches = arrayOf(
     FieldMatch(type = Faction::class),
     FieldMatch(type = Color::class),
     FieldMatch(type = Color::class),

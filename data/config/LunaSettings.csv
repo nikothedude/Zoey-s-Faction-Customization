@@ -1,0 +1,2 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+ZFC_illegalEffectEnabled,Illegal Effects Enabled,Boolean,true,,"If disabled, illegal/legal commodities have no effect.",,,General

@@ -17,11 +17,11 @@ import patchlib.api.patch.Patch
 import zoey_fc.ReflectionUtils
 import zoey_fc.illegals.IllegalIntelPlugin
 
-@Patch(target = ClassMatch(targetPackage = "com.fs.starfarer.campaign.ui.intel", methodMatches = arrayOf(MethodMatch(methodName = "hasIllegal"))))
+@Patch(target = ClassMatch(packageName = "com.fs.starfarer.campaign.ui.intel", methodMatches = arrayOf(MethodMatch(methodName = "hasIllegal"))))
 object FactionIllegalsPanelPatch {
 
     @JvmStatic
-    @After(target = MethodMatch(parameters = arrayOf(Float::class), parameterCount = 1))
+    @After(target = MethodMatch(parameterTypes = arrayOf(Float::class), parameterCount = 1))
     fun modify(context: AfterContext) {
         val panel = context.self as UIPanelAPI
         val fac = ReflectionUtils.getDeclaredField(panel,  3) as? FactionAPI ?: return

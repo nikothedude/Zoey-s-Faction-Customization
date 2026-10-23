@@ -37,11 +37,9 @@ object IllegalCommodityHandler {
             active[id] = plugin
         }
 
-        active.forEach { it.value.reapply() }
-    }
+        if (ZFCSettings.ILLEGAL_EFFECT_ENABLED) {
+            active.forEach { it.value.reapply() }
+        }
 
-    fun getInvertedCommodities(): Map<String, IllegalCommodityPlugin> {
-        return ZFCSettings.specs.filter { it.value.illegalByDefault() && !Global.getSector().playerFaction.isIllegal(it.key) }
     }
-
 }

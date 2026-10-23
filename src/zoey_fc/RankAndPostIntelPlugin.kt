@@ -3,25 +3,14 @@ package zoey_fc
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.campaign.FactionAPI
 import com.fs.starfarer.api.impl.campaign.ids.Factions
-import com.fs.starfarer.api.impl.campaign.ids.FleetTypes
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin
 import com.fs.starfarer.api.ui.Alignment
 import com.fs.starfarer.api.ui.CustomPanelAPI
-import com.fs.starfarer.api.ui.Fonts
 import com.fs.starfarer.api.ui.SectorMapAPI
 import com.fs.starfarer.api.ui.UIComponentAPI
 import com.fs.starfarer.api.util.Misc
-import lunalib.lunaExtensions.addLunaColorPicker
 import lunalib.lunaExtensions.addLunaTextfield
-import lunalib.lunaExtensions.addLunaToggleButton
-import nikoblackhearted.illegals.CommCategory
-import nikoblackhearted.illegals.IllegalCommodityPlugin
 import org.magiclib.kotlin.getFactionMarkets
-import org.magiclib.kotlin.setAlpha
-import zoey_fc.MathUtils.getHue
-import zoey_fc.illegals.IllegalCommodityHandler
-import zoey_fc.illegals.IllegalIntelPlugin
-import java.awt.Color
 
 class RankAndPostIntelPlugin: BaseIntelPlugin() {
     companion object {

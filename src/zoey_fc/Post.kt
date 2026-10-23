@@ -1,3 +1,5 @@
+package zoey_fc
+
 import com.fs.starfarer.api.impl.campaign.ids.Ranks
 
 enum class Post {
